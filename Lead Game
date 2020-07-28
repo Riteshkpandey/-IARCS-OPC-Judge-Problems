@@ -1,0 +1,27 @@
+n=int(input())
+a1,b1=[0],[0]
+c=0
+maxi=-9999999999
+p1,p2=0,0
+for i in range(n):
+    a,b=map(int,input().split())
+    a1[0]+=a
+    b1[0]+=b
+    c=abs(a1[0]-b1[0])
+    if c>maxi:
+        maxi=c
+    if a1[0]>b1[0]:
+        p1+=1
+    elif b1[0]>a1[0]:
+        p2+=1
+print(p1)
+print(p2)
+if p1>p2:
+    print(1,end=" ")
+    print(maxi)
+elif p2>p1:
+    print(2,end=" ")
+    print(maxi)
+
+    
+        
